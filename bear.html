@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .face {
+      width: 300px;
+      height: 300px;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .eyes::before,
+    .eyes::after {
+      content: "";
+      width: 35px;
+      height: 35px;
+      background: black;
+      position: absolute;
+
+      border: 8px solid white;
+      border-radius: 50%;
+    }
+
+    .ears::before,
+    .ears::after {
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: white;
+      position: absolute;
+
+      border: 6px solid black;
+      border-radius: 50%;
+    }
+
+    .mouth {
+      position: relative;
+      width: 100px;
+      height: 70px;
+      background: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 5px solid black;
+      border-radius: 50%;
+    }
+
+    .mouth::before {
+      content: "";
+      width: 50px;
+      height: 20px;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 65%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .mouth::after {
+      content: "";
+      width: 20px;
+      height: 12px;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translate(-50%, -50%);
+      border: 1px solid black;
+      border-radius: 50%;
+    }
+
+    .cheek::before,
+    .cheek::after {
+      content: "";
+      width: 55px;
+      height: 55px;
+      background: red;
+      position: absolute;
+
+      border: 1px solid red;
+      border-radius: 50%;
+    }
+
+    .eyes::before {
+      left: 20%;
+      top: 25%;
+    }
+
+    .eyes::after {
+      right: 20%;
+      top: 25%;
+    }
+
+    .ears::before {
+      left: 10%;
+      top: 3%;
+    }
+
+    .ears::after {
+      right: 10%;
+      top: 3%;
+    }
+
+    .cheek::before {
+      left: -4%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .cheek::after {
+      right: -4%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .chest {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 50px 57.5px 0 57.5px;
+      border-color: #ffffff transparent transparent transparent;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      transform: translate(-50%, -50%);
+
+    }
+
+    .chest::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 35px 0 35px;
+      border-color: #000000 transparent transparent transparent;
+      position: absolute;
+      /* 為什麼用%無法控制位置 */
+      left: -35px;
+      top: -62px;
+
+    }
+
+    .chest::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 30px 35px 0 35px;
+      border-color: #000000 transparent transparent transparent;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="face">
+    <div class="eyes"></div>
+    <div class="ears"></div>
+    <div class="mouth"></div>
+    <div class="cheek"></div>
+    <div class="chest"></div>
+  </div>
+</body>
+
+</html>

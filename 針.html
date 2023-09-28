@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 400px;
+        height: 70px;
+        background: linear-gradient(
+          180deg,
+          rgba(251, 251, 251, 1) 0%,
+          rgba(207, 207, 207, 1) 50%,
+          rgba(249, 247, 250, 1) 100%
+        );
+        border: gainsboro solid 1px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .main::before {
+        content: "";
+        width: 400px;
+        height: 10px;
+        background: linear-gradient(
+          90deg,
+          transparent 98%,
+          rgb(197, 197, 197) 2%
+        );
+        background-size: 12.9px;
+        position: absolute;
+        left: 50%;
+        top: 7%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      .main::after {
+        content: "";
+        width: 200px;
+        height: 70px;
+        background: rgb(251, 208, 91);
+        background: linear-gradient(
+          180deg,
+          rgba(251, 208, 91, 1) 0%,
+          rgb(184, 183, 183) 50%,
+          rgba(251, 208, 91, 1) 100%
+        );
+        position: absolute;
+        left: 75%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .word {
+        color: rgb(214, 219, 224);
+        position: absolute;
+        bottom: 0;
+      }
+
+      .right::before {
+        content: "";
+        width: 30px;
+        height: 40px;
+        background: rgb(251, 251, 251);
+        background: linear-gradient(
+          180deg,
+          rgba(251, 251, 251, 1) 0%,
+          rgba(207, 207, 207, 1) 50%,
+          rgba(249, 247, 250, 1) 100%
+        );
+        border: gainsboro solid 1px;
+        border-radius: 10%;
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .right::after {
+        content: "";
+        width: 100px;
+        height: 0.3px;
+        background: rgb(160, 159, 159);
+        border: rgb(85, 85, 85) solid 0.3px;
+        position: absolute;
+        left: 107.8%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .left::before {
+        content: "";
+        width: 30px;
+        height: 40px;
+        background: rgb(251, 251, 251);
+        background: linear-gradient(
+          180deg,
+          rgba(251, 251, 251, 1) 0%,
+          rgba(207, 207, 207, 1) 50%,
+          rgba(249, 247, 250, 1) 100%
+        );
+        border: gainsboro solid 1px;
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .left::after {
+        content: "";
+        width: 25px;
+        height: 70px;
+        background: rgb(251, 251, 251);
+        background: linear-gradient(
+          180deg,
+          rgba(251, 251, 251, 1) 0%,
+          rgba(207, 207, 207, 1) 50%,
+          rgba(249, 247, 250, 1) 100%
+        );
+        border-radius: 10%;
+        border: gainsboro solid 1px;
+        position: absolute;
+        right: 107.8%;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+
+      .center {
+        width: 30px;
+        height: 70px;
+        background: black;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="right"></div>
+      <div class="left"></div>
+      <div class="word">Made in Taiwan</div>
+    </div>
+    <div class="center"></div>
+  </body>
+</html>
